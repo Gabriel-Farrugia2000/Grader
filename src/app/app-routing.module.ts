@@ -11,6 +11,30 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'voucher-offers',
+    loadChildren: () => import('./voucher-offers/voucher-offers.module').then( m => m.VoucherOffersPageModule)
+  },
+  {
+    path: 'tabs',
+    loadChildren: () => import('./user-tabs/user-tabs.module').then( m => m.UserTabsPageModule)
+  },
+  {
+    path: 'popover',
+    loadChildren: () => import('./popover/popover.module').then( m => m.PopoverPageModule)
+  },
+  {
+    path: 'help-popover',
+    loadChildren: () => import('./help-popover/help-popover.module').then( m => m.HelpPopoverPageModule)
+  },
+  {
+    path: 'sign-in',
+    loadChildren: () => import('./sign-in/sign-in.module').then( m => m.SignInPageModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
+  },
 ];
 
 @NgModule({

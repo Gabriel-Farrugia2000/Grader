@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="user-header" class="ion-padding">
+    
+    <!-- User Avatar (Profile Picture) -->
+    <ion-avatar>
+      <img src="assets/shapes.svg" alt="">
+    </ion-avatar>
+
+    <!-- Username -->
+    <div class="ion-text-center">
+      <h3 *ngIf="name || surname">{{ name }} {{ surname }}</h3>
+      <h3 *ngIf="!name && !surname">Guest User</h3>
+    </div>
+  </div>
+
+  <ion-button color="primary">Claimed Vouchers</ion-button>
+  <ion-button color="primary">Objectives</ion-button>
+  <ion-button color="primary">Vouchers Offers</ion-button>
+  <ion-button color="primary">How it works</ion-button>
+
+
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="Home">
+        <ion-icon name="home-outline"></ion-icon>
+        <ion-label>Home</ion-label>
+        <ion-badge>4</ion-badge>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="Objectives">
+        <ion-icon name="bookmarks-outline"></ion-icon>
+        <ion-label>Objectives</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="Help">
+        <ion-icon name="pricetag-outline"></ion-icon>
+        <ion-label>Vouchers</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="How it works">
+        <ion-icon name="help-circle-outline"></ion-icon>
+        <ion-label>How it works</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="Settings">
+        <ion-icon name="settings-outline"></ion-icon>
+        <ion-label>Settings</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>

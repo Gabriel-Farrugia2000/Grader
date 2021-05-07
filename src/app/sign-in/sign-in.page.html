@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Sign In</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="user-header" class="ion-padding">
+    
+    <!-- User Avatar (Profile Picture) -->
+    <ion-avatar>
+      <img src="assets/shapes.svg" alt="">
+    </ion-avatar>
+
+    <!-- Username -->
+    <div class="ion-text-center">
+      <h3 *ngIf="email || password">{{ email }} {{ password }}</h3>
+      <h3 *ngIf="!email && !password">Sign In</h3>
+      <h6>Please sign in by using your school account</h6>
+    </div>
+  </div>
+
+  <ion-list>
+
+    <!-- Name Input -->
+    <ion-item>
+      <ion-label position="floating">
+        Email
+        <ion-text color="danger">*</ion-text>
+      </ion-label>
+
+      <ion-input clearInput [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <!-- End Name Input -->
+
+    <!-- Surname Input -->
+    <ion-item>
+      <ion-label position="floating">
+        Password
+        <ion-text color="danger">*</ion-text>
+      </ion-label>
+
+      <ion-input clearInput [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <!-- End Surname Input -->
+
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-button
+    class="ion-no-margin"
+    expand="full"
+    [disabled]="!email || !password">LOGIN</ion-button>
+</ion-footer>

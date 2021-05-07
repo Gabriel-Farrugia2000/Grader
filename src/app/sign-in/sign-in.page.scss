@@ -1,0 +1,20 @@
+ion-slides {
+    height: 100%;
+  
+    ion-slide {
+      flex-direction: column;
+  
+      > ion-icon {
+        color: var(--ion-color-primary);
+        font-size: 3rem;
+      }
+  
+      p {
+        color: var(--ion-color-medium);
+  
+        strong {
+          color: var(--ion-color-dark);
+        }
+      }
+    }
+  }
