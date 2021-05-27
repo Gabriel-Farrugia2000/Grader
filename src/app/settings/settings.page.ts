@@ -1,20 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
 import { HelpPopoverPage } from '../help-popover/help-popover.page';
-import { AlbumService } from '../services/album.service';
-
 
 @Component({
-  selector: 'app-profile',
-  templateUrl: './profile.page.html',
-  styleUrls: ['./profile.page.scss'],
+  selector: 'app-settings',
+  templateUrl: './settings.page.html',
+  styleUrls: ['./settings.page.scss'],
 })
-export class ProfilePage implements OnInit {
+export class SettingsPage implements OnInit {
 
-  constructor(
-    public popoverController: PopoverController,
-    private albumService: AlbumService
-  ) { }
+  constructor(public popoverController: PopoverController) { }
 
   ngOnInit() {
   }
@@ -31,11 +26,4 @@ export class ProfilePage implements OnInit {
     const { role } = await popover.onDidDismiss();
     console.log('onDidDismiss resolved with role', role);
   }
-
-  takePhoto()
-  {
-    this.albumService.takePhoto();
-  }
-
-
 }

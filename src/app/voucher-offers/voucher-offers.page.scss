@@ -1,5 +1,6 @@
-ion-header{
-    margin-top: 10px;
+ion-toolbar{
+    --background: #2D759A;
+    --color: white;
 }
 
 ion-title{
@@ -12,6 +13,8 @@ ion-title{
     margin-top: 10px;
     margin-left: 15px;
     margin-bottom: 2rem;
+    background-color: white;
+    z-index: 2;
 }
 .points{
    padding-left: 4.5rem;

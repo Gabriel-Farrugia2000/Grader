@@ -26,3 +26,12 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 ion-title { text-align: center; }
+
+ion-content {
+    --background: linear-gradient(0deg, rgb(31, 89, 135, 100) 0%, 35%, rgba(70,162,186,100) 100%);
+}
+
+ion-list {
+    --ion-item-background: transparent;
+    --ion-text-color: #fff 
+}

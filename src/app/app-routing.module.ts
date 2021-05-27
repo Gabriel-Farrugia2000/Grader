@@ -35,6 +35,22 @@ const routes: Routes = [
     path: 'profile',
     loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
   },
+  {
+    path: 'objective',
+    loadChildren: () => import('./objective/objective.module').then( m => m.ObjectivePageModule)
+  },
+  {
+    path: 'easy-objective-popover',
+    loadChildren: () => import('./easy-objective-popover/easy-objective-popover.module').then( m => m.EasyObjectivePopoverPageModule)
+  },
+  {
+    path: 'redeemed-vouchers',
+    loadChildren: () => import('./redeemed-vouchers/redeemed-vouchers.module').then( m => m.RedeemedVouchersPageModule)
+  },
+  {
+    path: 'settings',
+    loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
+  },
 ];
 
 @NgModule({

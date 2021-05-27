@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/profile"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>OBJECTIVES</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click) ="helpPopover()">
+        <ion-icon name="help" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="pointsborder">
+    <p class="points">{{ points }} points available </p>
+  </div>
+
+  <ion-list lines="full">
+    <ion-list-header>
+      Advanced
+    </ion-list-header>
+    <ion-item *ngFor="let objective of advanced" (click)="objectivePopover(objective)">
+      <ion-label>
+        <h2>{{objective.name}}</h2>
+        <ion-text color="warning">
+          <p>{{ outputReward(objective) }}</p>
+        </ion-text>
+          <p class="progress">5/5</p>
+      </ion-label>
+      <ion-icon color="light" name="chevron-down-outline"></ion-icon>
+    </ion-item>
+  </ion-list>
+    
+  <ion-list lines="full">
+    <ion-list-header>Easy</ion-list-header>
+    <ion-item *ngFor="let objective of easy" (click)="objectivePopover(objective)">
+      <ion-label>
+        <h2>{{objective.name}}</h2>
+        <ion-text color="warning">
+          <p>{{ outputReward(objective) }}</p>
+        </ion-text>
+      </ion-label>
+      <ion-icon color="light" name="chevron-down-outline"></ion-icon>
+    </ion-item>
+  </ion-list>
+</ion-content>

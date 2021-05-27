@@ -1,7 +1,11 @@
+ion-toolbar{
+    --background: #2D759A;
+    --color: white;
+}
+
 #user-header {
     --avatar-size: 8rem;
 
-    background-color: var(--ion-color-primary);
 
     h3 {
         color: var(--ion-color-primary-contrast);
@@ -15,6 +19,19 @@
         width: var(--avatar-size, 128px);
     }
 
+}
 
+ion-button{
+    margin-top: 1rem;
+    width: 140px;
+    height: 70px;
+    font-size: 11px;
+    border: solid black 1px;
+
+}
+
+ion-icon{
+    font-size: 30px;
+    padding-right: 20px;
 }
 
