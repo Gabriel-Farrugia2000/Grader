@@ -51,6 +51,10 @@ const routes: Routes = [
     path: 'settings',
     loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
   },
+  {
+    path: 'redvouchpopover',
+    loadChildren: () => import('./redvouchpopover/redvouchpopover.module').then( m => m.RedvouchpopoverPageModule)
+  },
 ];
 
 @NgModule({

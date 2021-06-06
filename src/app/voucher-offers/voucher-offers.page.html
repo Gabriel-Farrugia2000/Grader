@@ -24,7 +24,7 @@
   <ion-list lines="full">
     <ion-item *ngFor="let voucher of vouchers" (click) ="presentPopover(voucher)">
         <ion-avatar slot="start">
-          <img src="images/Eurosport.jpg">
+          <img src="{{ voucher.companyLogo || 'assets/shapes.svg' }}">
         </ion-avatar>
         <ion-label>{{ voucher.shop }}</ion-label>
       <ion-icon name="chevron-down-outline" color="light"></ion-icon>

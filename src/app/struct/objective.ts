@@ -9,4 +9,5 @@ export interface Objective
 
     //optional
     reward?: number | Voucher;
+    claimed?: boolean;
 }

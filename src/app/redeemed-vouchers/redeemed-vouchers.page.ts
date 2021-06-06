@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
 import { HelpPopoverPage } from '../help-popover/help-popover.page';
+import { RedvouchpopoverPage } from '../redvouchpopover/redvouchpopover.page';
 import { StorageService } from '../services/storage.service';
 import { VouchersService } from '../services/vouchers.service';
 import { VOUCHERS } from '../struct/voucher-data';
@@ -34,6 +35,20 @@ export class RedeemedVouchersPage implements OnInit {
     this.vouchers = this.voucherService.getVouchers(true);
   }
 
+  async presentPopover(voucher: Voucher) {
+    const popover = await this.popoverController.create({
+      component: RedvouchpopoverPage,
+      componentProps: { 'voucher': voucher },
+      translucent: true
+    });
+
+    await popover.present();
+
+    const { data } = await popover.onDidDismiss();
+    console.log('onDidDismiss resolved with role', data);
+
+  }
+  
   async helpPopover(ev: any) {
     const popover = await this.popoverController.create({
       component: HelpPopoverPage,

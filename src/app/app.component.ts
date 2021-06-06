@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlbumService } from './services/album.service';
 import { StorageService } from './services/storage.service';
 import { VouchersService } from './services/vouchers.service';
 
@@ -10,7 +11,8 @@ import { VouchersService } from './services/vouchers.service';
 export class AppComponent implements OnInit {
   constructor(
     private storageService: StorageService,
-    private voucherService: VouchersService
+    private voucherService: VouchersService,
+    private albumService: AlbumService
   ) {}
 
   async ngOnInit()
@@ -22,5 +24,7 @@ export class AppComponent implements OnInit {
     }
     
     await this.voucherService.init();
+    await this.albumService.init();
   }
+  
 }

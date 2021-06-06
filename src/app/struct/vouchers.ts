@@ -5,5 +5,6 @@ export interface Voucher
     description: string;
     costPoints: number;
     expiration: number;
+    companyLogo?: string;
     redeemed?: boolean;
 }

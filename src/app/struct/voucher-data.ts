@@ -6,7 +6,8 @@ export const VOUCHERS: Voucher[] = [
         shop: 'Urban Jungle',
         description: 'Get a 15% off on Shoes',
         costPoints: 100,
-        expiration: new Date(2021, 6, 31).getTime()
+        expiration: new Date(2021, 6, 31).getTime(),
+        companyLogo: 'assets/images/UJ.png'
         
     },
     
@@ -15,7 +16,8 @@ export const VOUCHERS: Voucher[] = [
         shop: 'McDonalds',
         description: 'Buy 1 and get 2 free big mac',
         costPoints: 100,
-        expiration: new Date(2021, 6, 31).getTime()
+        expiration: new Date(2021, 6, 31).getTime(),
+        companyLogo: 'assets/images/McDonalds.png'
         
     },
 
@@ -24,7 +26,8 @@ export const VOUCHERS: Voucher[] = [
         shop: 'Decathlon',
         description: '20% off on everything',
         costPoints: 200,
-        expiration: new Date(2021, 6, 31).getTime()
+        expiration: new Date(2021, 6, 31).getTime(),
+        companyLogo: 'assets/images/Decathlon_Logo.png'
         
     },
 
@@ -33,7 +36,8 @@ export const VOUCHERS: Voucher[] = [
         shop: 'Terranova',
         description: '10% off on summer clothes',
         costPoints: 200,
-        expiration: new Date(2021, 6, 31).getTime()
+        expiration: new Date(2021, 6, 31).getTime(),
+        companyLogo: 'assets/images/terranova.png'
         
     },
 
@@ -42,7 +46,8 @@ export const VOUCHERS: Voucher[] = [
         shop: 'Eurosport',
         description: '20% off from sports section',
         costPoints: 100,
-        expiration: new Date(2021, 6, 31).getTime()
+        expiration: new Date(2021, 6, 31).getTime(),
+        companyLogo: 'assets/images/Eurosport.jpg'
         
     },
     

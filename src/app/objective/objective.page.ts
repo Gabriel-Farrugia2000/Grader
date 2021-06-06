@@ -7,6 +7,7 @@ import { Objective } from '../struct/objective';
 import { OBJECTIVES } from '../struct/objective-data';
 import { Voucher } from '../struct/vouchers';
 import { HelpPopoverPage } from '../help-popover/help-popover.page';
+import { ObjectiveService } from '../services/objective.service';
 
 @Component({
   selector: 'app-objective',
@@ -25,7 +26,8 @@ export class ObjectivePage {
   constructor(
     public popoverController: PopoverController,
     private storageService: StorageService,
-    private voucherService: VouchersService
+    private voucherService: VouchersService,
+    private objectiveService: ObjectiveService
     ) { }
     
     async ionViewWillEnter()
@@ -65,6 +67,7 @@ export class ObjectivePage {
         }
         
         await this.storageService.set('points', points);
+        objective.claimed = true;
         this.points = points;
       }
       
@@ -93,7 +96,7 @@ export class ObjectivePage {
     {
       // true = redeemed vouchers
       this.vouchers = this.voucherService.getVouchers(true);
-      
+     
       this.easy = this.objectives.filter(o => o.level == 'easy');
       this.advanced = this.objectives.filter(o => o.level == 'advanced');
     }

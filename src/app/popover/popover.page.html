@@ -1,7 +1,7 @@
   <ion-card-header>
     <ion-card-subtitle>
-        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-      {{ voucher.description }}
+        <img src="{{ voucher.companyLogo || 'assets/shapes.svg' }}">
+      <p><b>{{ voucher.description }}</b></p>
     </ion-card-subtitle>
   </ion-card-header>
 

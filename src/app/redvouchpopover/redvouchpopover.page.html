@@ -1,0 +1,18 @@
+<ion-card-header>
+  <ion-card-subtitle>
+    <img class="img" src="{{ voucher.companyLogo || 'assets/shapes.svg' }}">
+    <p><b>{{ voucher.description }}</b></p>
+  </ion-card-subtitle>
+</ion-card-header>
+
+
+<ion-card-content>
+Expires
+<br>
+{{ voucher.expiration | date }}
+<br>
+Terms & Condition Apply
+
+<img src="assets/images/barcode.png">
+<ion-button (click)="DismissClick()">CLOSE</ion-button>
+</ion-card-content>

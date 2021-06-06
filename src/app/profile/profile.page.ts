@@ -11,12 +11,15 @@ import { AlbumService } from '../services/album.service';
 })
 export class ProfilePage implements OnInit {
 
+  profilePic: string;
+
   constructor(
     public popoverController: PopoverController,
     private albumService: AlbumService
   ) { }
 
   ngOnInit() {
+    this.profilePic = this.albumService.profilePic;
   }
 
   async helpPopover(ev: any) {
@@ -32,9 +35,10 @@ export class ProfilePage implements OnInit {
     console.log('onDidDismiss resolved with role', role);
   }
 
-  takePhoto()
+  async takePhoto()
   {
-    this.albumService.takePhoto();
+    await this.albumService.takePhoto('profile-pic');
+    this.profilePic = this.albumService.profilePic;
   }
 
 
